@@ -113,7 +113,7 @@ def generate_ai_response(prompt_template, input_data):
         st.error("❌ Please enter your Gemini API Key in the left sidebar to proceed.")
         return None
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(f"{prompt_template}\n\nInput Text:\n{input_data}")
         return response.text
     except Exception as e:
