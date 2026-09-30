@@ -235,4 +235,8 @@ with tab4:
             st.warning("Please paste some content first!")
         else:
             with st.spinner("Structuring your study calendar..."):
-                prompt = (
+                prompt =  prompt = """
+                            Create a 3-day revision plan based on the input text.
+                            Return ONLY a clean JSON array structured exactly like this:
+                            [{"day": "Day 1", "tasks": ["Task 1", "Task 2"]}, {"day": "Day 2", "tasks": ["Task 1", "Task 2"]}]
+                            """
